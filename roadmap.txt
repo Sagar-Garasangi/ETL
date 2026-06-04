@@ -1,0 +1,15 @@
+Current
+↓
+Docker
+↓
+Airflow
+↓
+Advanced SQL
+↓
+Data Warehousing
+↓
+Spark
+↓
+Cloud Basics
+↓
+Incremental Loading
