@@ -12,6 +12,7 @@ def extract(url,record):
     while True:
         try:
             temp=requests.get(url,params={"skip":skip,"limit":limit},timeout=40)
+
             status=temp.status_code
             if(status==429):
                 time.sleep(10)
