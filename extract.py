@@ -11,7 +11,7 @@ def extract(url,record):
     limit=100
     while True:
         try:
-            temp=requests.get(url,params={"skip":skip,"limit":limit},timeout=10)
+            temp=requests.get(url,params={"skip":skip,"limit":limit},timeout=25)
             status=temp.status_code
             if(status==429):
                 time.sleep(10)
