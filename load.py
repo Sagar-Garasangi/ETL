@@ -1,7 +1,18 @@
 import pandas as pd
 import mysql.connector
-print("connector")
-conn=mysql.connector.connect(host="localhost",user="****",password="*****",database="ETL")
+from config import (
+    MYSQL_HOST,
+    MYSQL_USER,
+    MYSQL_PASSWORD,
+    MYSQL_DATABASE
+)
+
+conn = mysql.connector.connect(
+    host=MYSQL_HOST,
+    user=MYSQL_USER,
+    password=MYSQL_PASSWORD,
+    database=MYSQL_DATABASE
+)
 cursor=conn.cursor()
 
 def load_table(cursor, table_name, df):
